@@ -1,235 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');*/
 
-* {
-    font-family: "Pixelify Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #a5728b;
-}
+/** {*/
+/*    font-family: "Pixelify Sans", sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*    background-color: #72a3a5;*/
+/*}*/
 
-.container {
-    display: inline-block;
-    align-content: center;
-    width: 850px;
-    border-radius: 10px;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-right: auto;
-    margin-left: auto;
-}
+/*.container {*/
+/*    display: inline-block;*/
+/*    align-content: center;*/
+/*    width: 850px;*/
+/*    border-radius: 10px;*/
+/*    align-items: flex-end;*/
+/*    justify-content: space-between;*/
+/*    margin-right: auto;*/
+/*    margin-left: auto;*/
+/*}*/
 
-.game-cont {
-    display: inline-flex;
-    padding: 10px;
-}
+/*.game-cont {*/
+/*    display: inline-flex;*/
+/*    padding: 10px;*/
+/*}*/
 
-.cowboy-pixel{
-    height: 250px;
-
-
-}
-
-.visible {
-    display: block;
-}
-
-.game-box {
-    padding-top: 100px;
-}
-
-.pixel-box {
-    display: flex;
-    align-content: center;
-    margin-right: 500px;
-    margin-left: 550px;
-
-}
-
-small {
-    font-size: 10px;
-    margin-bottom: 60px;
-}
-
-.title-container {
-    text-align: center;
-}
-
-.cont-cont {
-    display: flex;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 0;
-}
-.title {
-    font-size : 40px;
-    align-content: center;
-
-}
+/*.cowboy-pixel{*/
+/*    height: 250px;*/
 
 
-.cow {
-    height: 200px;
+/*}*/
 
-}
+/*.visible {*/
+/*    display: block;*/
+/*}*/
 
-.cowboy-image img {
-    user-select: none;
-    max-width: 270px;
-}
-.cowboy-image h1 {
-    font-size: 1.45rem;
-    text-align: center;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-.game-box .affichage-mot {
-    gap: 10px;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.affichage-mot .lettre {
-    width: 28px;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    border-bottom: 3px solid #000;
-}
-.affichage-mot .lettre.guessed {
-    margin: -40px 0 35px;
-    border-color: transparent;
-}
-.game-box h4 {
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.game-box h4 b {
-    font-weight: 600;
-}
-.game-box .nbr-essais b {
-    color: #ff0000;
-}
-.game-box .clavier {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    justify-content: center;
-}
-:where(.div-jeu, .clavier) bouton {
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    text-transform: uppercase;
-    background: #a30a56;
-}
-.clavier bouton {
-    padding: 7px;
-    width: calc(100% / 9 - 5px);
-}
-.clavier bouton[disabled] {
-    pointer-events: none;
-    opacity: 0.6;
-}
-:where(.div-jeu, .clavier) bouton:hover {
-    background: #8286c9;
-}
-.div-jeu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    pointer-events: none;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    padding: 0 10px;
-    transition: opacity 0.4s ease;
-}
-.div-jeu.show {
-    opacity: 1;
-    pointer-events: auto;
-    transition: opacity 0.4s 0.4s ease;
-}
-.div-jeu .content {
-    padding: 30px;
-    max-width: 420px;
-    width: 100%;
-    border-radius: 10px;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.div-jeu img {
-    max-width: 130px;
-    margin-bottom: 20px;
-}
-.div-jeu img[src="images/victory.gif"] {
-    margin-left: -10px;
-}
-.div-jeu h4 {
-    font-size: 1.53rem;
-}
-.div-jeu p {
-    font-size: 1.15rem;
-    margin: 15px 0 30px;
-    font-weight: 500;
-}
-.div-jeu p b {
-    color: #5E63BA;
-    font-weight: 600;
-}
-.div-jeu bouton {
-    padding: 12px 23px;
-}
+/*.game-box {*/
+/*    padding-top: 100px;*/
+/*}*/
 
-@media (max-width: 782px) {
-    .container {
-        flex-direction: column;
-        padding: 30px 15px;
-        align-items: center;
-    }
-    .cowboy-image img {
-        max-width: 200px;
-    }
-    .cowboy-image h1 {
-        display: none;
-    }
-    .game-box h4 {
-        font-size: 1rem;
-    }
-    .affichage-mot .lettre {
-        margin-bottom: 35px;
-        font-size: 1.7rem;
-    }
-    .affichage-mot .lettre.guessed {
-        margin: -35px 0 25px;
-    }
-    .div-jeu img {
-        max-width: 120px;
-    }
-    .div-jeu h4 {
-        font-size: 1.45rem;
-    }
-    .div-jeu p {
-        font-size: 1.1rem;
-    }
-    .div-jeu bouton {
-        padding: 10px 18px;
-    }
-}
+/*.pixel-box {*/
+/*    display: flex;*/
+/*    align-content: center;*/
+/*    margin-right: 500px;*/
+/*    margin-left: 550px;*/
+
+/*}*/
+
+/*small {*/
+/*    font-size: 10px;*/
+/*    margin-bottom: 60px;*/
+/*}*/
+
+/*.title-container {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.cont-cont {*/
+/*    display: flex;*/
+/*    margin-left: 200px;*/
+/*    margin-right: 200px;*/
+/*    padding: 0;*/
+/*}*/
+/*.title {*/
+/*    font-size : 40px;*/
+/*    align-content: center;*/
+
+/*}*/
+
+
+/*.cow {*/
+/*    height: 200px;*/
+
+/*}*/
+
+/*.cowboy-image img {*/
+/*    user-select: none;*/
+/*    max-width: 270px;*/
+/*}*/
+/*.cowboy-image h1 {*/
+/*    font-size: 1.45rem;*/
+/*    text-align: center;*/
+/*    margin-top: 20px;*/
+/*    text-transform: uppercase;*/
+/*}*/
+/*.game-box .affichage-mot {*/
+/*    gap: 10px;*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+/*.affichage-mot .lettre {*/
+/*    width: 28px;*/
+/*    font-size: 2rem;*/
+/*    text-align: center;*/
+/*    font-weight: 600;*/
+/*    margin-bottom: 40px;*/
+/*    text-transform: uppercase;*/
+/*    border-bottom: 3px solid #000;*/
+/*}*/
+/*.affichage-mot .lettre.guessed {*/
+/*    margin: -40px 0 35px;*/
+/*    border-color: transparent;*/
+/*}*/
+/*.game-box h4 {*/
+/*    text-align: center;*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: 500;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+/*.game-box h4 b {*/
+/*    font-weight: 600;*/
+/*}*/
+/*.game-box .nbr-essais b {*/
+/*    color: #ff0000;*/
+/*}*/
+/*.game-box .clavier {*/
+/*    display: flex;*/
+/*    gap: 5px;*/
+/*    flex-wrap: wrap;*/
+/*    margin-top: 40px;*/
+/*    justify-content: center;*/
+/*}*/
+/*:where(.div-jeu, .clavier) bouton {*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    cursor: pointer;*/
+/*    font-size: 1rem;*/
+/*    font-weight: 600;*/
+/*    border-radius: 4px;*/
+/*    text-transform: uppercase;*/
+/*    background: #a30a56;*/
+/*}*/
+/*.clavier bouton {*/
+/*    padding: 7px;*/
+/*    width: calc(100% / 9 - 5px);*/
+/*}*/
+/*.clavier bouton[disabled] {*/
+/*    pointer-events: none;*/
+/*    opacity: 0.6;*/
+/*}*/
+/*:where(.div-jeu, .clavier) bouton:hover {*/
+/*    background: #8286c9;*/
+/*}*/
+/*.div-jeu {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    opacity: 0;*/
+/*    pointer-events: none;*/
+/*    background: rgba(0,0,0,0.6);*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    z-index: 9999;*/
+/*    padding: 0 10px;*/
+/*    transition: opacity 0.4s ease;*/
+/*}*/
+/*.div-jeu.show {*/
+/*    opacity: 1;*/
+/*    pointer-events: auto;*/
+/*    transition: opacity 0.4s 0.4s ease;*/
+/*}*/
+/*.div-jeu .content {*/
+/*    padding: 30px;*/
+/*    max-width: 420px;*/
+/*    width: 100%;*/
+/*    border-radius: 10px;*/
+/*    background: #fff;*/
+/*    text-align: center;*/
+/*    box-shadow: 0 10px 20px rgba(0,0,0,0.1);*/
+/*}*/
+/*.div-jeu img {*/
+/*    max-width: 130px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+/*.div-jeu img[src="images/victory.gif"] {*/
+/*    margin-left: -10px;*/
+/*}*/
+/*.div-jeu h4 {*/
+/*    font-size: 1.53rem;*/
+/*}*/
+/*.div-jeu p {*/
+/*    font-size: 1.15rem;*/
+/*    margin: 15px 0 30px;*/
+/*    font-weight: 500;*/
+/*}*/
+/*.div-jeu p b {*/
+/*    color: #5E63BA;*/
+/*    font-weight: 600;*/
+/*}*/
+/*.div-jeu bouton {*/
+/*    padding: 12px 23px;*/
+/*}*/
+
+/*@media (max-width: 782px) {*/
+/*    .container {*/
+/*        flex-direction: column;*/
+/*        padding: 30px 15px;*/
+/*        align-items: center;*/
+/*    }*/
+/*    .cowboy-image img {*/
+/*        max-width: 200px;*/
+/*    }*/
+/*    .cowboy-image h1 {*/
+/*        display: none;*/
+/*    }*/
+/*    .game-box h4 {*/
+/*        font-size: 1rem;*/
+/*    }*/
+/*    .affichage-mot .lettre {*/
+/*        margin-bottom: 35px;*/
+/*        font-size: 1.7rem;*/
+/*    }*/
+/*    .affichage-mot .lettre.guessed {*/
+/*        margin: -35px 0 25px;*/
+/*    }*/
+/*    .div-jeu img {*/
+/*        max-width: 120px;*/
+/*    }*/
+/*    .div-jeu h4 {*/
+/*        font-size: 1.45rem;*/
+/*    }*/
+/*    .div-jeu p {*/
+/*        font-size: 1.1rem;*/
+/*    }*/
+/*    .div-jeu bouton {*/
+/*        padding: 10px 18px;*/
+/*    }*/
+/*}*/
