@@ -89,7 +89,7 @@ context.addCustomMessageListener('urn:x-cast:cinna', event => {
     if (message.type === 'LETTER_PICKED') {
         const letter = message.letter;
         console.log('Received letter:', letter);
-        // Call the function to update the game based on the received letter
+//
         initGame(letter);
     }
 });
