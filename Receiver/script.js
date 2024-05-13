@@ -5,6 +5,7 @@ const cowboyImage = document.querySelector(".cowboy-image img");
 const divJeu = document.querySelector(".div-jeu");
 const rejouerBtn = divJeu.querySelector("bouton");
 
+
 // Déclaration des variables du jeu
 let motAdeviner, lettresOk, lettresPasOk;
 const essaisMax = 6;
@@ -15,7 +16,7 @@ const initialiseJeu = () => {
     cowboyImage.src = "images/bonhomme-0.jpg";
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
     affichageMot.innerHTML = motAdeviner.split("").map(() => `<li class="lettre"></li>`).join("");
-    clavier.querySelectorAll("bouton").forEach(btn => btn.disabled = false);
+    // clavier.querySelectorAll("bouton").forEach(btn => btn.disabled = false);
     divJeu.classList.remove("show");
 }
 
@@ -61,12 +62,25 @@ const initGame = (bouton, clickedlettre) => {
 }
 
 // Creating clavier boutons and adding event listeners
-for (let i = 97; i <= 122; i++) {
-    const bouton = document.createElement("bouton");
-    bouton.innerText = String.fromCharCode(i);
-    clavier.appendChild(bouton);
-    bouton.addEventListener("click", (e) => initGame(e.target, String.fromCharCode(i)));
-}
+// for (let i = 97; i <= 122; i++) {
+//     const bouton = document.createElement("bouton");
+//     bouton.innerText = String.fromCharCode(i);
+//     clavier.appendChild(bouton);
+//     bouton.addEventListener("click", (e) => initGame(e.target, String.fromCharCode(i)));
+// }
 
 choisirMot();
 rejouerBtn.addEventListener("click", choisirMot);
+
+const context = cast.framework.CastReceiverContext.getInstance();
+context.addCustomMessageListener('urn:x-cast:cinna', event => {
+    const message = event.data;
+    if (message.type === 'LETTER_PICKED') {
+        const letter = message.letter;
+        console.log('Received letter:', letter);
+        // Call the function to update the game based on the received letter
+        initGame(letter);
+    }
+});
+
+context.start();
