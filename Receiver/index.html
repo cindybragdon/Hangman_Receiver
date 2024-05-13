@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Hangman Receiver</title>
-    <style>
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowboy Pendu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="word-list.js" defer></script>
+    <script src="script.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
 </head>
 <body>
-<h1>Hangman Receiver</h1>
-<img id="hangmanImage" src="./image/bonhomme00.png" alt="Hangman" />
-<div id="word"></div>
 
+<div class="div-jeu" >
+    <div class="content">
+        <img src="#" alt="gif">
+        <h4>Game Over!</h4>
+        <p>Le mot à deviner était : <b>rainbow</b></p>
+        <bouton class="play-again">Rejouer?</bouton>
+    </div>
+</div>
+<div class="cont-cont">
 
-<script src="./script.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+    <div class="container">
+        <div class="title-container">
+            <p class="title"> COWBOY PENDU</p>
+            <small> CINNA GAMES </small>
+        </div>
+        <div class="game-cont">
+            <div class="cowboy-image">
+                <img src="#" draggable="false" alt="cowboy-img">
+            </div>
+
+            <div class="game-box">
+                <ul class="affichage-mot"></ul>
+                <h4 class="categorie-text">Catégorie: <b></b></h4>
+                <h4 class="indice-text">Indice: <b></b></h4>
+                <h4 class="nbr-essais">Essais: <b></b></h4>
+                <div class="clavier"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="pixel-box">
+    <img class="cow"  class="button" src="./images/cow2.png"/>
+    <img  class="cowboy-pixel"  src="./images/cowboy30.png"/>
+    <img  class="cow"  src="./images/cow1.png"/> </br>
+</div>
 </body>
 </html>
