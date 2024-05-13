@@ -29,6 +29,10 @@
 
 }
 
+.visible {
+    display: block;
+}
+
 .game-box {
     padding-top: 100px;
 }

@@ -4,7 +4,8 @@ const clavier = document.querySelector(".clavier");
 const cowboyImage = document.querySelector(".cowboy-image img");
 const divJeu = document.querySelector(".div-jeu");
 const rejouerBtn = divJeu.querySelector("bouton");
-
+const categorieText = document.querySelector(".categorie-text");
+const indiceText = document.querySelector(".indice-text");
 
 // Déclaration des variables du jeu
 let motAdeviner, lettresOk, lettresPasOk;
@@ -20,6 +21,16 @@ const initialiseJeu = () => {
     divJeu.classList.remove("show");
 }
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const cowboyPixelButton = document.getElementById('cowboy-pixel');
+//
+//     cowboyPixelButton.addEventListener('click', () => {
+//         const categorieText = document.querySelector('.categorie-text');
+//         const indiceText = document.querySelector('.indice-text');
+//         categorieText.classList.toggle('visible');
+//         indiceText.classList.toggle('visible');
+//     });
+// });
 const choisirMot = () => {
     const { mot , indice, category } = listeDeMots[Math.floor(Math.random() * listeDeMots.length)];
     motAdeviner = mot ;
