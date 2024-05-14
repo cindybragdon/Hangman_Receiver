@@ -9,8 +9,10 @@
 }
 
 body {
-    transform: scale(0.8);
-
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    transform: scale(1);
 }
 
 .container {
