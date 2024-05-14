@@ -3,7 +3,14 @@
 * {
     font-family: "Pixelify Sans", sans-serif;
     background-color: #72a3a5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .container {
@@ -24,8 +31,6 @@
 
 .cowboy-pixel{
     height: 250px;
-
-
 }
 
 .visible {
@@ -39,8 +44,8 @@
 .pixel-box {
     display: flex;
     align-content: center;
-    margin-right: 500px;
-    margin-left: 550px;
+    margin-right: 700px;
+    margin-left: 700px;
 
 }
 
