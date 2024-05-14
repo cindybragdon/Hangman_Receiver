@@ -29,6 +29,12 @@ const choisirMot = () => {
     initialiseJeu();
 }
 
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+
 const gameOver = (isVictory) => {
     // La petite fenêtre quand le jeu est terminé
     const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
