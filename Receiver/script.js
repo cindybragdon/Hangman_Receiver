@@ -33,6 +33,7 @@ var w = window.innerWidth;
 var h = window.innerHeight;
 
 var x = document.getElementById("demo");
+
 x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
 
 const gameOver = (isVictory) => {
@@ -44,7 +45,7 @@ const gameOver = (isVictory) => {
     divJeu.classList.add("show");
 }
 
-const initGame = (bouton, clickedlettre) => {
+const initGame = ( clickedlettre) => {
     // Checking if clickedlettre is exist on the motAdeviner
     if(motAdeviner.includes(clickedlettre)) {
         // Showing all correct lettres on the word display
@@ -60,10 +61,8 @@ const initGame = (bouton, clickedlettre) => {
         lettresPasOk++;
         cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
     }
-    bouton.disabled = true; // Disabling the clicked bouton so user can't click again
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
 
-    // Calling gameOver function if any of these condition meets
     if(lettresPasOk === essaisMax) return gameOver(false);
     if(lettresOk.length === motAdeviner.length) return gameOver(true);
 }
@@ -71,6 +70,7 @@ const initGame = (bouton, clickedlettre) => {
 
 
 choisirMot();
+
 rejouerBtn.addEventListener("click", choisirMot);
 
 const context = cast.framework.CastReceiverContext.getInstance();
@@ -78,8 +78,7 @@ context.addCustomMessageListener('urn:x-cast:cinna', event => {
     const message = event.data;
     if (message.type === 'LETTER_PICKED') {
         const letter = message.letter;
-        console.log('Received letter:', letter);
-//
+
         initGame(letter);
     }
 });
