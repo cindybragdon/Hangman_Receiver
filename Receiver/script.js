@@ -1,11 +1,8 @@
 const affichageMot = document.querySelector(".affichage-mot");
 const nbrEssais = document.querySelector(".nbr-essais b");
-const clavier = document.querySelector(".clavier");
 const cowboyImage = document.querySelector(".cowboy-image img");
 const divJeu = document.querySelector(".div-jeu");
 const rejouerBtn = divJeu.querySelector("bouton");
-const categorieText = document.querySelector(".categorie-text");
-const indiceText = document.querySelector(".indice-text");
 
 // Déclaration des variables du jeu
 let motAdeviner, lettresOk, lettresPasOk;
