@@ -22,7 +22,6 @@ const choisirMot = () => {
     initialiseJeu();
 }
 
-
 const initGame = ( lettre) => {
     // Checking if clickedlettre is exist on the motAdeviner
     if(motAdeviner.includes(lettre)) {
