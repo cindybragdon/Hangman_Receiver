@@ -54,17 +54,17 @@ const choisirMot = () => {
 //         castSession.sendMessage('urn:x-cast:cinna', message);
 //     }
 // }
-//
-// choisirMot();
-//
-// const context = cast.framework.CastReceiverContext.getInstance();
-// context.addCustomMessageListener('urn:x-cast:cinna', event => {
-//     const message = event.data;
-//     if (message.type === 'LETTER_PICKED') {
-//         const lettre = message.lettre;
-//         console.log('Received letter:', lettre);
-//         initGame(lettre);
-//     }
-// });
-//
-// context.start();
+
+choisirMot();
+
+const context = cast.framework.CastReceiverContext.getInstance();
+context.addCustomMessageListener('urn:x-cast:cinna', event => {
+    const message = event.data;
+    if (message.type === 'LETTER_PICKED') {
+        const lettre = message.lettre;
+        console.log('Received letter:', lettre);
+        initGame(lettre);
+    }
+});
+
+context.start();
