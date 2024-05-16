@@ -27,14 +27,14 @@ const choisirMot = () => {
 }
 
 
-const gameOver = (isVictory) => {
-    // La petite fenêtre quand le jeu est terminé
-    // const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
-    divJeu.querySelector("img").src = `images/${isVictory ? 'happyCowboy' : 'sadCowboy'}.jpg`;
-    divJeu.querySelector("h4").innerText = isVictory ? 'Petez-vous les bretelles! Vous êtes un champion!' : 'Ça vole pas haut votre affaire!';
-    divJeu.querySelector("p").innerHTML = `${modalText} <b>${motAdeviner}</b>`;
-    divJeu.classList.add("show");
-}
+// const gameOver = (isVictory) => {
+//     // La petite fenêtre quand le jeu est terminé
+//     // const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
+//     divJeu.querySelector("img").src = `images/${isVictory ? 'happyCowboy' : 'sadCowboy'}.jpg`;
+//     divJeu.querySelector("h4").innerText = isVictory ? 'Petez-vous les bretelles! Vous êtes un champion!' : 'Ça vole pas haut votre affaire!';
+//     divJeu.querySelector("p").innerHTML = `${modalText} <b>${motAdeviner}</b>`;
+//     divJeu.classList.add("show");
+// }
 
 const initGame = ( lettre) => {
     // Checking if clickedlettre is exist on the motAdeviner
@@ -54,8 +54,8 @@ const initGame = ( lettre) => {
     }
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
 
-    if(lettresPasOk === essaisMax) return gameOver(false);
-    if(lettresOk.length === motAdeviner.length) return gameOver(true);
+    // if(lettresPasOk === essaisMax) return gameOver(false);
+    // if(lettresOk.length === motAdeviner.length) return gameOver(true);
 }
 
 
@@ -68,7 +68,7 @@ const context = cast.framework.CastReceiverContext.getInstance();
 context.addCustomMessageListener('urn:x-cast:cinna', event => {
     const message = event.data;
     if (message.type === 'LETTER_PICKED') {
-        const lettre = message.lettre;
+        const lettre = message;
 
         initGame(lettre);
     }
