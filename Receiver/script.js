@@ -26,21 +26,15 @@ const choisirMot = () => {
     initialiseJeu();
 }
 
-var w = window.innerWidth;
-var h = window.innerHeight;
 
-var x = document.getElementById("demo");
-
-x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
-
-// const gameOver = (isVictory) => {
-//     // La petite fenêtre quand le jeu est terminé
-//     const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
-//     divJeu.querySelector("img").src = `images/${isVictory ? 'happyCowboy' : 'sadCowboy'}.jpg`;
-//     divJeu.querySelector("h4").innerText = isVictory ? 'Petez-vous les bretelles! Vous êtes un champion!' : 'Ça vole pas haut votre affaire!';
-//     divJeu.querySelector("p").innerHTML = `${modalText} <b>${motAdeviner}</b>`;
-//     divJeu.classList.add("show");
-// }
+const gameOver = (isVictory) => {
+    // La petite fenêtre quand le jeu est terminé
+    // const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
+    divJeu.querySelector("img").src = `images/${isVictory ? 'happyCowboy' : 'sadCowboy'}.jpg`;
+    divJeu.querySelector("h4").innerText = isVictory ? 'Petez-vous les bretelles! Vous êtes un champion!' : 'Ça vole pas haut votre affaire!';
+    divJeu.querySelector("p").innerHTML = `${modalText} <b>${motAdeviner}</b>`;
+    divJeu.classList.add("show");
+}
 
 const initGame = ( lettre) => {
     // Checking if clickedlettre is exist on the motAdeviner
