@@ -1,7 +1,6 @@
 const affichageMot = document.querySelector(".affichage-mot");
 const nbrEssais = document.querySelector(".nbr-essais b");
 const cowboyImage = document.querySelector(".cowboy-image img");
-const divJeu = document.querySelector(".div-jeu");
 
 // Déclaration des variables du jeu
 let motAdeviner, lettresOk, lettresPasOk;
@@ -13,8 +12,6 @@ const initialiseJeu = () => {
     cowboyImage.src = "images/bonhomme-0.jpg";
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
     affichageMot.innerHTML = motAdeviner.split("").map(() => `<li class="lettre"></li>`).join("");
-
-    divJeu.classList.remove("show");
 }
 
 const choisirMot = () => {
@@ -29,7 +26,6 @@ const choisirMot = () => {
 const initGame = ( lettre) => {
     // Checking if clickedlettre is exist on the motAdeviner
     if(motAdeviner.includes(lettre)) {
-        // Showing all correct lettres on the word display
         [...motAdeviner].forEach((lettre, index) => {
             if(lettre === lettre) {
                 lettresOk.push(lettre);
@@ -38,19 +34,17 @@ const initGame = ( lettre) => {
             }
         });
     } else {
-        // If clicked lettre doesn't exist then update the lettresPasOk and hangman image
         lettresPasOk++;
         cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
     }
+
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
-    if(lettresPasOk === essaisMax) {
-
-
-        sendMessageToSender({ type: 'GAME_OVER', isVictory: false });
-    }
-    if(lettresOk.length === motAdeviner.length) {
-        sendMessageToSender({ type: 'GAME_OVER', isVictory: true });
-    }
+    // if(lettresPasOk === essaisMax) {
+    //     sendMessageToSender({ type: 'GAME_OVER', isVictory: false });
+    // }
+    // if(lettresOk.length === motAdeviner.length) {
+    //     sendMessageToSender({ type: 'GAME_OVER', isVictory: true });
+    // }
     // if(lettresPasOk === essaisMax) return gameOver(false);
     // if(lettresOk.length === motAdeviner.length) return gameOver(true);
 }
@@ -63,7 +57,6 @@ const sendMessageToSender = (message) => {
 }
 
 choisirMot();
-
 
 const context = cast.framework.CastReceiverContext.getInstance();
 context.addCustomMessageListener('urn:x-cast:cinna', event => {
