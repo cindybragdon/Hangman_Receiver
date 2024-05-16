@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    transform: scale(0.5);
+    transform: scale(0.6);
 }
 
 .container {
@@ -46,8 +46,8 @@ body {
 .pixel-box {
     display: flex;
     align-content: center;
-    margin-right: 700px;
-    margin-left: 700px;
+    margin-right: 600px;
+    margin-left: 500px;
 
 }
 
