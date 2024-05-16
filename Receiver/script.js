@@ -1,18 +1,18 @@
-// const affichageMot = document.querySelector(".affichage-mot");
-// const nbrEssais = document.querySelector(".nbr-essais b");
-// const cowboyImage = document.querySelector(".cowboy-image img");
-//
-// // Déclaration des variables du jeu
-// let motAdeviner, lettresOk, lettresPasOk;
-// const essaisMax = 6;
-//
-// const initialiseJeu = () => {
-//     lettresOk = [];
-//     lettresPasOk = 0;
-//     cowboyImage.src = "images/bonhomme-0.jpg";
-//     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
-//     affichageMot.innerHTML = motAdeviner.split("").map(() => `<li class="lettre"></li>`).join("");
-// }
+const affichageMot = document.querySelector(".affichage-mot");
+const nbrEssais = document.querySelector(".nbr-essais b");
+const cowboyImage = document.querySelector(".cowboy-image img");
+
+// Déclaration des variables du jeu
+let motAdeviner, lettresOk, lettresPasOk;
+const essaisMax = 6;
+
+const initialiseJeu = () => {
+    lettresOk = [];
+    lettresPasOk = 0;
+    cowboyImage.src = "images/bonhomme-0.jpg";
+    nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
+    affichageMot.innerHTML = motAdeviner.split("").map(() => `<li class="lettre"></li>`).join("");
+}
 //
 // const choisirMot = () => {
 //     const { mot , indice, category } = listeDeMots[Math.floor(Math.random() * listeDeMots.length)];
