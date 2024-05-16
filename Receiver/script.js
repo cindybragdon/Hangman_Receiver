@@ -2,7 +2,6 @@ const affichageMot = document.querySelector(".affichage-mot");
 const nbrEssais = document.querySelector(".nbr-essais b");
 const cowboyImage = document.querySelector(".cowboy-image img");
 const divJeu = document.querySelector(".div-jeu");
-const rejouerBtn = divJeu.querySelector("bouton");
 
 // Déclaration des variables du jeu
 let motAdeviner, lettresOk, lettresPasOk;
@@ -26,15 +25,6 @@ const choisirMot = () => {
     initialiseJeu();
 }
 
-
-// const gameOver = (isVictory) => {
-//     // La petite fenêtre quand le jeu est terminé
-//     // const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
-//     divJeu.querySelector("img").src = `images/${isVictory ? 'happyCowboy' : 'sadCowboy'}.jpg`;
-//     divJeu.querySelector("h4").innerText = isVictory ? 'Petez-vous les bretelles! Vous êtes un champion!' : 'Ça vole pas haut votre affaire!';
-//     divJeu.querySelector("p").innerHTML = `${modalText} <b>${motAdeviner}</b>`;
-//     divJeu.classList.add("show");
-// }
 
 const initGame = ( lettre) => {
     // Checking if clickedlettre is exist on the motAdeviner
@@ -74,7 +64,6 @@ const sendMessageToSender = (message) => {
 
 choisirMot();
 
-rejouerBtn.addEventListener("click", choisirMot);
 
 const context = cast.framework.CastReceiverContext.getInstance();
 context.addCustomMessageListener('urn:x-cast:cinna', event => {
