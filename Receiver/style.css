@@ -2,7 +2,7 @@
 
 * {
     font-family: "Pixelify Sans", sans-serif;
-    background-color: #bc9191;
+    background-color: #5e639f;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    transform: scale(0.2);
+    transform: scale(0.4);
 }
 
 .container {
