@@ -14,13 +14,13 @@ const initialiseJeu = () => {
     affichageMot.innerHTML = motAdeviner.split("").map(() => `<li class="lettre"></li>`).join("");
 }
 //
-// const choisirMot = () => {
-//     const { mot , indice, category } = listeDeMots[Math.floor(Math.random() * listeDeMots.length)];
-//     motAdeviner = mot ;
-//     document.querySelector(".indice-text b").innerText = indice;
-//     document.querySelector(".categorie-text b").innerText = category;
-//     initialiseJeu();
-// }
+const choisirMot = () => {
+    const { mot , indice, category } = listeDeMots[Math.floor(Math.random() * listeDeMots.length)];
+    motAdeviner = mot ;
+    document.querySelector(".indice-text b").innerText = indice;
+    document.querySelector(".categorie-text b").innerText = category;
+    initialiseJeu();
+}
 //
 // const initGame = ( lettre) => {
 //     // Checking if clickedlettre is exist on the motAdeviner
@@ -39,8 +39,8 @@ const initialiseJeu = () => {
 //
 //     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
 // }
-//
-// choisirMot();
+
+choisirMot();
 //
 // const context = cast.framework.CastReceiverContext.getInstance();
 // context.addCustomMessageListener('urn:x-cast:cinna', event => {
