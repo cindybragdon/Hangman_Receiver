@@ -2,7 +2,7 @@
 
 * {
     font-family: "Pixelify Sans", sans-serif;
-    background-color: #c290d8;
+    background-color: #470a60;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,10 +33,6 @@ body {
 
 .cowboy-pixel{
     height: 250px;
-}
-
-.visible {
-    display: block;
 }
 
 .game-box {
