@@ -22,38 +22,38 @@ const choisirMot = () => {
     initialiseJeu();
 }
 
-// const initGame = ( lettre) => {
-//     // Checking if clickedlettre is exist on the motAdeviner
-//     if(motAdeviner.includes(lettre)) {
-//         [...motAdeviner].forEach((lettre, index) => {
-//             if(lettre === lettre) {
-//                 lettresOk.push(lettre);
-//                 affichageMot.querySelectorAll("li")[index].innerText = lettre;
-//                 affichageMot.querySelectorAll("li")[index].classList.add("guessed");
-//             }
-//         });
-//     } else {
-//         lettresPasOk++;
-//         cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
-//     }
-//
-//     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
-//     // if(lettresPasOk === essaisMax) {
-//     //     sendMessageToSender({ type: 'GAME_OVER', isVictory: false });
-//     // }
-//     // if(lettresOk.length === motAdeviner.length) {
-//     //     sendMessageToSender({ type: 'GAME_OVER', isVictory: true });
-//     // }
-//     // if(lettresPasOk === essaisMax) return gameOver(false);
-//     // if(lettresOk.length === motAdeviner.length) return gameOver(true);
-// }
-//
-// const sendMessageToSender = (message) => {
-//     const castSession = context.getCurrentSenderSession();
-//     if (castSession) {
-//         castSession.sendMessage('urn:x-cast:cinna', message);
-//     }
-// }
+const initGame = ( lettre) => {
+    // Checking if clickedlettre is exist on the motAdeviner
+    if(motAdeviner.includes(lettre)) {
+        [...motAdeviner].forEach((lettre, index) => {
+            if(lettre === lettre) {
+                lettresOk.push(lettre);
+                affichageMot.querySelectorAll("li")[index].innerText = lettre;
+                affichageMot.querySelectorAll("li")[index].classList.add("guessed");
+            }
+        });
+    } else {
+        lettresPasOk++;
+        cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
+    }
+
+    nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
+    // if(lettresPasOk === essaisMax) {
+    //     sendMessageToSender({ type: 'GAME_OVER', isVictory: false });
+    // }
+    // if(lettresOk.length === motAdeviner.length) {
+    //     sendMessageToSender({ type: 'GAME_OVER', isVictory: true });
+    // }
+    // if(lettresPasOk === essaisMax) return gameOver(false);
+    // if(lettresOk.length === motAdeviner.length) return gameOver(true);
+}
+
+const sendMessageToSender = (message) => {
+    const castSession = context.getCurrentSenderSession();
+    if (castSession) {
+        castSession.sendMessage('urn:x-cast:cinna', message);
+    }
+}
 
 choisirMot();
 
