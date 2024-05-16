@@ -53,12 +53,24 @@ const initGame = ( lettre) => {
         cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
     }
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
+    if(lettresPasOk === essaisMax) {
 
+
+        sendMessageToSender({ type: 'GAME_OVER', isVictory: false });
+    }
+    if(lettresOk.length === motAdeviner.length) {
+        sendMessageToSender({ type: 'GAME_OVER', isVictory: true });
+    }
     // if(lettresPasOk === essaisMax) return gameOver(false);
     // if(lettresOk.length === motAdeviner.length) return gameOver(true);
 }
 
-
+const sendMessageToSender = (message) => {
+    const castSession = context.getCurrentSenderSession();
+    if (castSession) {
+        castSession.sendMessage('urn:x-cast:cinna', message);
+    }
+}
 
 choisirMot();
 
