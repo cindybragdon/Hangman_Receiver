@@ -2,7 +2,7 @@
 
 * {
     font-family: "Pixelify Sans", sans-serif;
-    background-color: #c83a08;
+    background-color: #083ec8;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -121,84 +121,4 @@ small {
 .game-box .nbr-essais b {
     color: #ff0000;
 }
-.game-box .clavier {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    justify-content: center;
-}
-:where(.div-jeu, .clavier) bouton {
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    text-transform: uppercase;
-    background: #a30a56;
-}
-.clavier bouton {
-    padding: 7px;
-    width: calc(100% / 9 - 5px);
-}
-.clavier bouton[disabled] {
-    pointer-events: none;
-    opacity: 0.6;
-}
-:where(.div-jeu, .clavier) bouton:hover {
-    background: #8286c9;
-}
-.div-jeu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    pointer-events: none;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    padding: 0 10px;
-    transition: opacity 0.4s ease;
-}
-.div-jeu.show {
-    opacity: 1;
-    pointer-events: auto;
-    transition: opacity 0.4s 0.4s ease;
-}
-.div-jeu .content {
-    padding: 30px;
-    max-width: 420px;
-    width: 100%;
-    border-radius: 10px;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.div-jeu img {
-    max-width: 130px;
-    margin-bottom: 20px;
-}
-.div-jeu img[src="images/victory.gif"] {
-    margin-left: -10px;
-}
-.div-jeu h4 {
-    font-size: 1.53rem;
-}
-.div-jeu p {
-    font-size: 1.15rem;
-    margin: 15px 0 30px;
-    font-weight: 500;
-}
-.div-jeu p b {
-    color: #5E63BA;
-    font-weight: 600;
-}
-.div-jeu bouton {
-    padding: 12px 23px;
-}
+
