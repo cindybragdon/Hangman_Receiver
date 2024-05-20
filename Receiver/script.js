@@ -28,8 +28,8 @@ const onCustomMessage = (event) => {
 
     // Process the received letter
     if (typeof letter === 'string' && letter.length === 1) {
-        // Use the received letter as needed
-        console.log('Received letter:', letter);
+        // Display the received letter in a specific HTML element
+        document.getElementById('letters').textContent = letter;
     } else {
         console.error('Invalid message received: ', letter);
     }
@@ -40,7 +40,6 @@ context.addCustomMessageListener(CUSTOM_NAMESPACE, onCustomMessage);
 
 // Start the receiver context
 context.start();
-
 
 // Existing game code
 const affichageMot = document.querySelector(".affichage-mot");
