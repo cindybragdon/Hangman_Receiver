@@ -3,14 +3,33 @@ const CUSTOM_NAMESPACE = 'urn:x-cast:cinna';
 
 // Function to handle custom messages
 
+// const onCustomMessage = (event) => {
+//     console.log('Received custom message: ', event.data);
+//     const data = JSON.parse(event.data);
+//     const letter = data.letter;
+//
+//     // Process the received letter
+//     if (typeof letter === 'string' && letter.length === 1) {
+//         initGame(letter);
+//     } else {
+//         console.error('Invalid message received: ', letter);
+//     }
+// };
+//
+// // Listen for custom messages
+// context.addCustomMessageListener(CUSTOM_NAMESPACE, onCustomMessage);
+//
+// // Start the receiver context
+// context.start();
+
 const onCustomMessage = (event) => {
     console.log('Received custom message: ', event.data);
-    const data = JSON.parse(event.data);
-    const letter = data.letter;
+    const letter = event.data;
 
     // Process the received letter
     if (typeof letter === 'string' && letter.length === 1) {
-        initGame(letter);
+        // Use the received letter as needed
+        console.log('Received letter:', letter);
     } else {
         console.error('Invalid message received: ', letter);
     }
@@ -21,7 +40,6 @@ context.addCustomMessageListener(CUSTOM_NAMESPACE, onCustomMessage);
 
 // Start the receiver context
 context.start();
-console.log('Receiver started and listening for messages');
 
 
 // Existing game code
