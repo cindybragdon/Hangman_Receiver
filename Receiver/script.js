@@ -1,38 +1,20 @@
-
-// Function to handle custom messages
-
-// const onCustomMessage = (event) => {
-//     console.log('Received custom message: ', event.data);
-//     const data = JSON.parse(event.data);
-//     const letter = data.letter;
-//
-//     // Process the received letter
-//     if (typeof letter === 'string' && letter.length === 1) {
-//         initGame(letter);
-//     } else {
-//         console.error('Invalid message received: ', letter);
-//     }
-// };
-//
-// // Listen for custom messages
-// context.addCustomMessageListener(CUSTOM_NAMESPACE, onCustomMessage);
-//
-// // Start the receiver context
-// context.start();
-
 const context = cast.framework.CastReceiverContext.getInstance();
+
 context.addCustomMessageListener('urn:x-cast:cinna', event => {
     const message = event.data;
-    if (message.type === 'LETTER_PICKED') {
+    if (message.type === 'initialize') {
+        // Respond to the initialization message
+        event.source.postMessage({
+            type: 'receiverReady'
+        });
+    } else if (message.type === 'LETTER_PICKED') {
         const letter = message.letter;
         console.log('Received letter:', letter);
-//
         initGame(letter);
     }
 });
 
 context.start();
-
 
 // Existing game code
 const affichageMot = document.querySelector(".affichage-mot");
