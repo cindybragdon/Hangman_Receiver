@@ -59,19 +59,19 @@ const gameOver = (isVictory) => {
     divJeu.classList.add("show");
 };
 
-const initGame = (lettre) => {
-    // Checking if the letter exists in the motAdeviner
-    if (motAdeviner.includes(lettre)) {
+const initGame = (letter) => {
+    // Checking if clicked letter exists in the motAdeviner
+    if (motAdeviner.includes(letter)) {
         // Showing all correct letters on the word display
         [...motAdeviner].forEach((char, index) => {
-            if (char === lettre) {
+            if (char === letter) {
                 lettresOk.push(char);
                 affichageMot.querySelectorAll("li")[index].innerText = char;
                 affichageMot.querySelectorAll("li")[index].classList.add("guessed");
             }
         });
     } else {
-        // If the letter doesn't exist then update the lettresPasOk and hangman image
+        // If clicked letter doesn't exist, then update the lettresPasOk and hangman image
         lettresPasOk++;
         cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
     }
