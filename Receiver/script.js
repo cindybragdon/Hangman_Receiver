@@ -1,16 +1,16 @@
 const context = cast.framework.CastReceiverContext.getInstance();
-const playerManager = context.getPlayerManager();
 const CUSTOM_NAMESPACE = 'urn:x-cast:cinna';
 
 // Function to handle custom messages
+
 const onCustomMessage = (event) => {
     console.log('Received custom message: ', event.data);
-    const letter = event.data;
+    const data = JSON.parse(event.data);
+    const letter = data.letter;
 
     // Process the received letter
     if (typeof letter === 'string' && letter.length === 1) {
         initGame(letter);
-        document.getElementById("letters").innerText(letter);
     } else {
         console.error('Invalid message received: ', letter);
     }
@@ -21,6 +21,8 @@ context.addCustomMessageListener(CUSTOM_NAMESPACE, onCustomMessage);
 
 // Start the receiver context
 context.start();
+console.log('Receiver started and listening for messages');
+
 
 // Existing game code
 const affichageMot = document.querySelector(".affichage-mot");
