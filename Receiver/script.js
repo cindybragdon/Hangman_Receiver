@@ -1,5 +1,8 @@
 const context = cast.framework.CastReceiverContext.getInstance();
 
+// Add an element to display messages
+const messageElement = document.getElementById('letters');
+
 context.addCustomMessageListener('urn:x-cast:cinna', event => {
     const message = event.data;
     if (message.type === 'initialize') {
@@ -7,14 +10,18 @@ context.addCustomMessageListener('urn:x-cast:cinna', event => {
         event.source.postMessage({
             type: 'receiverReady'
         });
+        // Update the message element to indicate initialization
+        messageElement.innerText = 'Receiver initialized';
     } else if (message.type === 'LETTER_PICKED') {
         const letter = message.letter;
-        console.log('Received letter:', letter);
         initGame(letter);
+        // Update the message element to show the received letter
+        messageElement.innerText = `Received letter: ${letter}`;
     }
 });
 
 context.start();
+
 
 // Existing game code
 const affichageMot = document.querySelector(".affichage-mot");
