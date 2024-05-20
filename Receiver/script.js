@@ -52,11 +52,11 @@ const choisirMot = () => {
 
 const gameOver = (isVictory) => {
     // La petite fenêtre quand le jeu est terminé
-    const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
+    // const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
     divJeu.querySelector("img").src = `images/${isVictory ? 'happyCowboy' : 'sadCowboy'}.jpg`;
     divJeu.querySelector("h4").innerText = isVictory ? 'Petez-vous les bretelles! Vous êtes un champion!' : 'Ça vole pas haut votre affaire!';
     divJeu.querySelector("p").innerHTML = `${modalText} <b>${motAdeviner}</b>`;
-    divJeu.classList.add("show");
+    // divJeu.classList.add("show");
 }
 
 const initGame = ( lettre) => {
@@ -76,9 +76,9 @@ const initGame = ( lettre) => {
         cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
     }
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
-
-    if(lettresPasOk === essaisMax) return gameOver(false);
-    if(lettresOk.length === motAdeviner.length) return gameOver(true);
+    //
+    // if(lettresPasOk === essaisMax) return gameOver(false);
+    // if(lettresOk.length === motAdeviner.length) return gameOver(true);
 }
 
 
