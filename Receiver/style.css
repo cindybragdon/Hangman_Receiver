@@ -2,17 +2,17 @@
 
 * {
     font-family: "Pixelify Sans", sans-serif;
-    background-color: #8d8a6c;
+    background-color: #490505;
     margin: 0;
     padding: 0;
 }
 
-/*body {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    height: 100vh;*/
-/*    transform: scale(0.6);*/
-/*}*/
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    transform: scale(0.6);
+}
 
 
 .container {
@@ -87,37 +87,37 @@ small {
     margin-top: 20px;
     text-transform: uppercase;
 }
-/*.game-box .affichage-mot {*/
-/*    gap: 10px;*/
-/*    list-style: none;*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-/*.affichage-mot .lettre {*/
-/*    width: 28px;*/
-/*    font-size: 2rem;*/
-/*    text-align: center;*/
-/*    font-weight: 600;*/
-/*    margin-bottom: 40px;*/
-/*    text-transform: uppercase;*/
-/*    border-bottom: 3px solid #000;*/
-/*}*/
-/*.affichage-mot .lettre.guessed {*/
-/*    margin: -40px 0 35px;*/
-/*    border-color: transparent;*/
-/*}*/
-/*.game-box h4 {*/
-/*    text-align: center;*/
-/*    font-size: 1.1rem;*/
-/*    font-weight: 500;*/
-/*    margin-bottom: 15px;*/
-/*}*/
-/*.game-box h4 b {*/
-/*    font-weight: 600;*/
-/*}*/
-/*.game-box .nbr-essais b {*/
-/*    color: #ff0000;*/
-/*}*/
+.game-box .affichage-mot {
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.affichage-mot .lettre {
+    width: 28px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #000;
+}
+.affichage-mot .lettre.guessed {
+    margin: -40px 0 35px;
+    border-color: transparent;
+}
+.game-box h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.game-box h4 b {
+    font-weight: 600;
+}
+.game-box .nbr-essais b {
+    color: #ff0000;
+}
 
