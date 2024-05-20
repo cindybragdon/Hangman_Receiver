@@ -2,17 +2,17 @@
 
 * {
     font-family: "Pixelify Sans", sans-serif;
-    background-color: #806767;
+    background-color: #c24343;
     margin: 0;
     padding: 0;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    transform: scale(0.6);
-}
+/*body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    height: 100vh;*/
+/*    transform: scale(0.6);*/
+/*}*/
 
 
 .container {
