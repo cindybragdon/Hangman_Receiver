@@ -35,8 +35,9 @@ const onCustomMessage = (event) => {
     }
 };
 
+
 // Listen for custom messages
-context.addCustomMessageListener(CUSTOM_NAMESPACE, onCustomMessage);
+context.addCustomMessageListener('urn:x-cast:cinna', onCustomMessage);
 
 // Start the receiver context
 context.start();
