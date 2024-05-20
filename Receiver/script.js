@@ -5,27 +5,27 @@ const divJeu = document.querySelector(".div-jeu");
 
 
 // cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
-const context = cast.framework.CastReceiverContext.getInstance();
-const playerManager = context.getPlayerManager();
-const CUSTOM_NAMESPACE = 'urn:x-cast:cinna';
-
-// Function to handle custom messages
-const onCustomMessage = (event) => {
-    console.log('Received custom message: ', event.data);
-    const letter = event.data;
-
-    // Process the received letter
-    if (typeof letter === 'string' && letter.length === 1) {
-        initGame(letter);
-    } else {
-        console.error('Invalid message received: ', letter);
-    }
-};
-// Listen for custom messages
-context.addCustomMessageListener(CUSTOM_NAMESPACE, onCustomMessage);
-
-// Start the receiver context
-context.start();
+// const context = cast.framework.CastReceiverContext.getInstance();
+// const playerManager = context.getPlayerManager();
+// const CUSTOM_NAMESPACE = 'urn:x-cast:cinna';
+//
+// // Function to handle custom messages
+// const onCustomMessage = (event) => {
+//     console.log('Received custom message: ', event.data);
+//     const letter = event.data;
+//
+//     // Process the received letter
+//     if (typeof letter === 'string' && letter.length === 1) {
+//         initGame(letter);
+//     } else {
+//         console.error('Invalid message received: ', letter);
+//     }
+// };
+// // Listen for custom messages
+// context.addCustomMessageListener(CUSTOM_NAMESPACE, onCustomMessage);
+//
+// // Start the receiver context
+// context.start();
 
 // Déclaration des variables du jeu
 let motAdeviner, lettresOk, lettresPasOk;
