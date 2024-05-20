@@ -7,6 +7,11 @@
 /*    padding: 0;*/
 /*}*/
 
+body {
+    transform: scale(0.6);
+    background-color: burlywood;
+}
+
 /*body {*/
 /*    margin: 0;*/
 /*    padding: 0;*/
