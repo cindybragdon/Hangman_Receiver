@@ -10,6 +10,7 @@ const onCustomMessage = (event) => {
     // Process the received letter
     if (typeof letter === 'string' && letter.length === 1) {
         initGame(letter);
+        document.getElementById("letters").innerText(letter);
     } else {
         console.error('Invalid message received: ', letter);
     }
