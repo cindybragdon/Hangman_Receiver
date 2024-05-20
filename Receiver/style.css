@@ -1,123 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');*/
 
 * {
     font-family: "Pixelify Sans", sans-serif;
-    background-color: #490505;
+    background-color: #bd5252;
     margin: 0;
     padding: 0;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    transform: scale(0.6);
-}
+/*body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    height: 100vh;*/
+/*    transform: scale(0.6);*/
+/*}*/
 
 
-.container {
-    display: inline-block;
-    align-content: center;
-    width: 850px;
-    border-radius: 10px;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-right: auto;
-    margin-left: auto;
-}
+/*.container {*/
+/*    display: inline-block;*/
+/*    align-content: center;*/
+/*    width: 850px;*/
+/*    border-radius: 10px;*/
+/*    align-items: flex-end;*/
+/*    justify-content: space-between;*/
+/*    margin-right: auto;*/
+/*    margin-left: auto;*/
+/*}*/
 
-.game-cont {
-    display: inline-flex;
-    padding: 10px;
-}
+/*.game-cont {*/
+/*    display: inline-flex;*/
+/*    padding: 10px;*/
+/*}*/
 
-.cowboy-pixel{
-    height: 250px;
-}
+/*.cowboy-pixel{*/
+/*    height: 250px;*/
+/*}*/
 
-.game-box {
-    padding-top: 100px;
-}
+/*.game-box {*/
+/*    padding-top: 100px;*/
+/*}*/
 
-.pixel-box {
-    display: flex;
-    align-content: center;
-    margin-right: 600px;
-    margin-left: 500px;
+/*.pixel-box {*/
+/*    display: flex;*/
+/*    align-content: center;*/
+/*    margin-right: 600px;*/
+/*    margin-left: 500px;*/
 
-}
+/*}*/
 
-small {
-    font-size: 10px;
-    margin-bottom: 60px;
-}
+/*small {*/
+/*    font-size: 10px;*/
+/*    margin-bottom: 60px;*/
+/*}*/
 
-.title-container {
-    text-align: center;
-}
+/*.title-container {*/
+/*    text-align: center;*/
+/*}*/
 
-.cont-cont {
-    display: flex;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 0;
-}
-.title {
-    font-size : 40px;
-    align-content: center;
+/*.cont-cont {*/
+/*    display: flex;*/
+/*    margin-left: 200px;*/
+/*    margin-right: 200px;*/
+/*    padding: 0;*/
+/*}*/
+/*.title {*/
+/*    font-size : 40px;*/
+/*    align-content: center;*/
 
-}
+/*}*/
 
 
-.cow {
-    height: 200px;
+/*.cow {*/
+/*    height: 200px;*/
 
-}
+/*}*/
 
-.cowboy-image img {
-    user-select: none;
-    max-width: 270px;
-    image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-}
-.cowboy-image h1 {
-    font-size: 1.45rem;
-    text-align: center;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-.game-box .affichage-mot {
-    gap: 10px;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.affichage-mot .lettre {
-    width: 28px;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    border-bottom: 3px solid #000;
-}
-.affichage-mot .lettre.guessed {
-    margin: -40px 0 35px;
-    border-color: transparent;
-}
-.game-box h4 {
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.game-box h4 b {
-    font-weight: 600;
-}
-.game-box .nbr-essais b {
-    color: #ff0000;
-}
+/*.cowboy-image img {*/
+/*    user-select: none;*/
+/*    max-width: 270px;*/
+/*    image-rendering: auto;*/
+/*    image-rendering: crisp-edges;*/
+/*    image-rendering: pixelated;*/
+/*}*/
+/*.cowboy-image h1 {*/
+/*    font-size: 1.45rem;*/
+/*    text-align: center;*/
+/*    margin-top: 20px;*/
+/*    text-transform: uppercase;*/
+/*}*/
+/*.game-box .affichage-mot {*/
+/*    gap: 10px;*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+/*.affichage-mot .lettre {*/
+/*    width: 28px;*/
+/*    font-size: 2rem;*/
+/*    text-align: center;*/
+/*    font-weight: 600;*/
+/*    margin-bottom: 40px;*/
+/*    text-transform: uppercase;*/
+/*    border-bottom: 3px solid #000;*/
+/*}*/
+/*.affichage-mot .lettre.guessed {*/
+/*    margin: -40px 0 35px;*/
+/*    border-color: transparent;*/
+/*}*/
+/*.game-box h4 {*/
+/*    text-align: center;*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: 500;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+/*.game-box h4 b {*/
+/*    font-weight: 600;*/
+/*}*/
+/*.game-box .nbr-essais b {*/
+/*    color: #ff0000;*/
+/*}*/
 
