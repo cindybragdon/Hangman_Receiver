@@ -2,7 +2,7 @@
 
 * {
     font-family: "Pixelify Sans", sans-serif;
-    background-color: #420e42;
+    background-color: #677aa8;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,6 +14,7 @@ body {
     height: 100vh;
     transform: scale(0.6);
 }
+
 
 .container {
     display: inline-block;
@@ -77,6 +78,9 @@ small {
 .cowboy-image img {
     user-select: none;
     max-width: 270px;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
 }
 .cowboy-image h1 {
     font-size: 1.45rem;
