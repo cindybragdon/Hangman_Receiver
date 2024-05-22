@@ -22,6 +22,7 @@ window.onload = function() {
 
         // Update the game status with the received letter
         gameStatusElement.innerText = 'Received letter: ' + letter;
+        initGame(letter);
     });
 };
 
