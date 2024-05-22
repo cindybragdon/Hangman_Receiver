@@ -8,8 +8,6 @@ options.customNamespaces['urn:x-cast:cinna'] = cast.framework.system.MessageType
 options.disableIdleTimeout = true;
 
 window.onload = function() {
-    const context = cast.framework.CastReceiverContext.getInstance();
-    const options = new cast.framework.CastReceiverOptions();
 
     options.customNamespaces = {
         'urn:x-cast:cinna': cast.framework.system.MessageType.JSON
@@ -21,15 +19,9 @@ window.onload = function() {
 
     context.addCustomMessageListener('urn:x-cast:CHANNEL1', event => {
         const receivedMessage = event.data;
-        console.log('Message received:', receivedMessage);
-
         // Update the game status with the received letter
         gameStatusElement.innerText = 'Received letter: ' + receivedMessage;
-
-
     });
-
-    console.log('Receiver application started');
 };
 
 
