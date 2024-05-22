@@ -1,7 +1,6 @@
 const context = cast.framework.CastReceiverContext.getInstance();
 
 // Add an element to display messages
-const messageElement = document.getElementById('letters');
 const options = new cast.framework.CastReceiverOptions();
 options.customNamespaces = Object.assign({});
 options.customNamespaces['urn:x-cast:cinna'] = cast.framework.system.MessageType.JSON;
