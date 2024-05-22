@@ -20,7 +20,7 @@ window.onload = function() {
         const letter = event.data.letter;
 
         // Update the game status with the received letter
-        gameStatusElement.innerText = 'Received letter: ' + letter;
+        gameStatusElement.innerText = 'Lettre recu : ' + letter;
         initGame(letter);
     });
 };
