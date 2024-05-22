@@ -71,7 +71,7 @@ const initGame = (letter) => {
     setTimeout(()=> {
         if (lettresPasOk === essaisMax) return choisirMot();
         if (lettresOk.length === motAdeviner.length) return choisirMot()
-    },500);
+    },2000);
 
 };
 
