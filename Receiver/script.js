@@ -10,7 +10,7 @@ options.disableIdleTimeout = true;
 window.onload = function() {
 
     options.customNamespaces = {
-        CHANNEL1: cast.framework.system.MessageType.JSON
+        'urn:x-cast:cinna': cast.framework.system.MessageType.JSON
     };
 
     context.start(options);
