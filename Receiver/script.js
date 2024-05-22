@@ -24,7 +24,7 @@ window.onload = function() {
         console.log('Message received:', receivedMessage);
 
         // Update the game status with the received letter
-        gameStatusElement.textContent = 'Received letter: ' + receivedMessage;
+        gameStatusElement.innerText = 'Received letter: ' + receivedMessage;
 
 
     });
