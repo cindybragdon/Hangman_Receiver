@@ -1,15 +1,16 @@
 const context = cast.framework.CastReceiverContext.getInstance();
+const CHANNEL1 = 'urn:x-cast:cinna';
 
 // Add an element to display messages
 const options = new cast.framework.CastReceiverOptions();
 options.customNamespaces = Object.assign({});
-options.customNamespaces['urn:x-cast:cinna'] = cast.framework.system.MessageType.JSON;
+options.customNamespaces[CHANNEL1] = cast.framework.system.MessageType.JSON;
 options.disableIdleTimeout = true;
 
 window.onload = function() {
 
     options.customNamespaces = {
-        'urn:x-cast:cinna': cast.framework.system.MessageType.JSON
+        CHANNEL1: cast.framework.system.MessageType.JSON
     };
 
     context.start(options);
@@ -17,7 +18,8 @@ window.onload = function() {
     const gameStatusElement = document.getElementById('letters');
 
     context.addCustomMessageListener('urn:x-cast:CHANNEL1', event => {
-        const receivedMessage = event.data;
+        const receivedMessage = event.data.letter;
+
         // Update the game status with the received letter
         gameStatusElement.innerText = 'Received letter: ' + receivedMessage;
     });
