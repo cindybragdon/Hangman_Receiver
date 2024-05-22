@@ -14,16 +14,6 @@ body {
 }
 
 
-/*.container {*/
-/*    display: inline-block;*/
-/*    align-content: center;*/
-/*    width: 850px;*/
-/*    border-radius: 10px;*/
-/*    align-items: flex-end;*/
-/*    justify-content: space-between;*/
-/*    margin-right: auto;*/
-/*    margin-left: auto;*/
-/*}*/
 
 .game-cont {
     display: inline-flex;
@@ -41,8 +31,6 @@ body {
 .pixel-box {
     display: flex;
     align-content: center;
-    margin-right: 500px;
-    margin-left: 500px;
 
 }
 

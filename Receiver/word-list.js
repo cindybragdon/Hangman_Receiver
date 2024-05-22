@@ -115,7 +115,7 @@ const listeDeMots = [
         category: "Expression québécoise"
     },
     {
-        mot: "Jacques",
+        mot: "jacques",
         indice: "T'es habillé comme la chienne à ...  .",
         category: "Expression québécoise"
     },

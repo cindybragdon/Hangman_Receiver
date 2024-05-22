@@ -1,7 +1,6 @@
 const context = cast.framework.CastReceiverContext.getInstance();
 const CHANNEL1 = 'urn:x-cast:cinna';
 
-// Add an element to display messages
 const options = new cast.framework.CastReceiverOptions();
 options.customNamespaces = Object.assign({});
 options.customNamespaces[CHANNEL1] = cast.framework.system.MessageType.JSON;
@@ -53,19 +52,9 @@ const choisirMot = () => {
     initialiseJeu();
 };
 
-const gameOver = (isVictory) => {
-    // La petite fenêtre quand le jeu est terminé
-    const modalText = isVictory ? `Vous avez trouvé le mot:` : 'Le mot était:';
-    divJeu.querySelector("img").src = `images/${isVictory ? 'happyCowboy' : 'sadCowboy'}.jpg`;
-    divJeu.querySelector("h4").innerText = isVictory ? 'Petez-vous les bretelles! Vous êtes un champion!' : 'Ça vole pas haut votre affaire!';
-    divJeu.querySelector("p").innerHTML = `${modalText} <b>${motAdeviner}</b>`;
-    divJeu.classList.add("show");
-};
 
 const initGame = (letter) => {
-    // Checking if clicked letter exists in the motAdeviner
     if (motAdeviner.includes(letter)) {
-        // Showing all correct letters on the word display
         [...motAdeviner].forEach((char, index) => {
             if (char === letter) {
                 lettresOk.push(char);
@@ -74,15 +63,14 @@ const initGame = (letter) => {
             }
         });
     } else {
-        // If clicked letter doesn't exist, then update the lettresPasOk and hangman image
         lettresPasOk++;
         cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
     }
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
 
-    if (lettresPasOk === essaisMax) return gameOver(false);
-    if (lettresOk.length === motAdeviner.length) return gameOver(true);
+    if (lettresPasOk === essaisMax) return choisirMot();
+    if (lettresOk.length === motAdeviner.length) return choisirMot()
 };
 
-// Start the game by choosing a word
+
 choisirMot();
