@@ -17,7 +17,7 @@ window.onload = function() {
 
     const gameStatusElement = document.getElementById('letters');
 
-    context.addCustomMessageListener('urn:x-cast:CHANNEL1', event => {
+    context.addCustomMessageListener(CHANNEL1, event => {
         const receivedMessage = event.data.letter;
 
         // Update the game status with the received letter
