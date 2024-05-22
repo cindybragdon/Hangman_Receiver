@@ -2,28 +2,35 @@ const context = cast.framework.CastReceiverContext.getInstance();
 
 // Add an element to display messages
 const messageElement = document.getElementById('letters');
-const options = new cast.framework.CastReceiverOptions();options.customNamespaces = Object.assign({});
+const options = new cast.framework.CastReceiverOptions();
+options.customNamespaces = Object.assign({});
 options.customNamespaces['urn:x-cast:cinna'] = cast.framework.system.MessageType.JSON;
 options.disableIdleTimeout = true;
 
-context.addCustomMessageListener('urn:x-cast:cinna', event => {
-    const message = event.data;
-    if (message.type === 'initialize') {
-        // Respond to the initialization message
-        event.source.postMessage({
-            type: 'receiverReady'
-        });
-        // Update the message element to indicate initialization
-        messageElement.innerText = 'Receiver initialized';
-    } else if (message.type === 'LETTER_PICKED') {
-        const letter = message.letter;
-        initGame(letter);
-        // Update the message element to show the received letter
-        messageElement.innerText = `Received letter: ${letter}`;
-    }
-});
+window.onload = function() {
+    const context = cast.framework.CastReceiverContext.getInstance();
+    const options = new cast.framework.CastReceiverOptions();
 
-context.start(options);
+    options.customNamespaces = {
+        'urn:x-cast:CHANNEL1': cast.framework.system.MessageType.JSON
+    };
+
+    context.start(options);
+
+    const gameStatusElement = document.getElementById('letters');
+
+    context.addCustomMessageListener('urn:x-cast:CHANNEL1', event => {
+        const receivedMessage = event.data;
+        console.log('Message received:', receivedMessage);
+
+        // Update the game status with the received letter
+        gameStatusElement.textContent = 'Received letter: ' + receivedMessage;
+
+
+    });
+
+    console.log('Receiver application started');
+};
 
 
 // Existing game code
