@@ -39,7 +39,7 @@ const essaisMax = 6;
 const initialiseJeu = () => {
     lettresOk = [];
     lettresPasOk = 0;
-    cowboyImage.src = "images/bonhomme-0.jpg";
+    cowboyImage.src = "images/hangman-0.png";
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
     affichageMot.innerHTML = motAdeviner.split("").map(() => `<li class="lettre"></li>`).join("");
 };
@@ -64,7 +64,7 @@ const initGame = (letter) => {
         });
     } else {
         lettresPasOk++;
-        cowboyImage.src = `images/bonhomme-${lettresPasOk}.jpg`;
+        cowboyImage.src = `images/hangman-${lettresPasOk}.png`;
     }
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
 
