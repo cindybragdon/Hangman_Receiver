@@ -23,7 +23,7 @@ context.addCustomMessageListener('urn:x-cast:cinna', event => {
     }
 });
 
-context.start();
+context.start(options);
 
 
 // Existing game code
