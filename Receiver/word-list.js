@@ -80,7 +80,7 @@ const listeDeMots = [
         category: "Le manger"
     },
     {
-        mot: "patechinois",
+        mot: "pate chinois",
         indice: "Savant mélange de 3 ingrédients beaucoup trop mous qui dégueule Cindy.",
         category: "Le manger"
     },
