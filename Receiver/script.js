@@ -68,8 +68,11 @@ const initGame = (letter) => {
     }
     nbrEssais.innerText = `${lettresPasOk} / ${essaisMax}`;
 
-    if (lettresPasOk === essaisMax) return choisirMot();
-    if (lettresOk.length === motAdeviner.length) return choisirMot()
+    setTimeout(()=> {
+        if (lettresPasOk === essaisMax) return choisirMot();
+        if (lettresOk.length === motAdeviner.length) return choisirMot()
+    },500);
+
 };
 
 
