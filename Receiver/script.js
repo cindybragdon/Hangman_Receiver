@@ -12,7 +12,7 @@ window.onload = function() {
     const options = new cast.framework.CastReceiverOptions();
 
     options.customNamespaces = {
-        'urn:x-cast:CHANNEL1': cast.framework.system.MessageType.JSON
+        'urn:x-cast:cinna': cast.framework.system.MessageType.JSON
     };
 
     context.start(options);
