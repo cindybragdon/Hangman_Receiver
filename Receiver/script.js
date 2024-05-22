@@ -18,10 +18,10 @@ window.onload = function() {
     const gameStatusElement = document.getElementById('letters');
 
     context.addCustomMessageListener(CHANNEL1, event => {
-        const receivedMessage = event.data.letter;
+        const letter = event.data.letter;
 
         // Update the game status with the received letter
-        gameStatusElement.innerText = 'Received letter: ' + receivedMessage;
+        gameStatusElement.innerText = 'Received letter: ' + letter;
     });
 };
 
